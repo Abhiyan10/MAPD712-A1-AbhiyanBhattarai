@@ -16,18 +16,18 @@ export default function MetricCalculator({ submitValue }) {
   };
   return (
     <View>
-      <Text>Your Height</Text>
+      <Text style={style.heightinCM}>Enter Height in cm</Text>
       <TextInput
         style={style.inputField}
-        placeholder="Your Height (in cm):"
+        placeholder="           Height:"
         name="height in cm"
         value={inputValue["height in cm"]}
         onChangeText={(text) => onChangeHandler(text, "height in cm")}
       ></TextInput>
-      <Text>Your Weight</Text>
+      <Text style={style.weightKg}>Enter Weight in KG</Text>
       <TextInput
         style={style.inputField}
-        placeholder="Your Wright in KG:"
+        placeholder="          Weight:"
         name="weight in kg"
         value={inputValue["weight in kg"]}
         onChangeText={(text) => onChangeHandler(text, "weight in kg")}
@@ -39,6 +39,14 @@ export default function MetricCalculator({ submitValue }) {
 
 const style = StyleSheet.create({
   inputField: {
-    borderWidth: 1,
+    borderWidth: 2,
+    margin: 10,
+    fontSize: 20,
+  },
+  heightinCM: {
+    fontSize: 25,
+  },
+  weightKg: {
+    fontSize: 25,
   },
 });

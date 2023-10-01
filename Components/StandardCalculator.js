@@ -19,24 +19,24 @@ export default function StandardCalculator({ submitValue }) {
   };
   return (
     <View>
-      <Text>Your Height in ft and in</Text>
+      <Text style={style.titlefield}>Enter Height in ft and in</Text>
       <TextInput
         style={style.inputField}
-        placeholder="Your Height (ft):"
+        placeholder="                 Height (ft):"
         name="height feet"
         value={inputValue.heightInFt}
         onChangeText={(text) => onChangeHandler(text, "height feet")}
       ></TextInput>
       <TextInput
-        placeholder="Your Height (in):"
+        placeholder="                 Height (in):"
         name="height inch"
         value={inputValue["height inch"]}
         onChangeText={(text) => onChangeHandler(text, "height inch")}
         style={style.inputField}
       ></TextInput>
-      <Text>Your Weight in lb</Text>
+      <Text style={style.weightfield}>Enter Weight in lb</Text>
       <TextInput
-        placeholder="Your weight (lb):"
+        placeholder="                 Weight:"
         name="weight lb"
         value={inputValue["weight lb"]}
         onChangeText={(text) => onChangeHandler(text, "weight lb")}
@@ -49,6 +49,14 @@ export default function StandardCalculator({ submitValue }) {
 
 const style = StyleSheet.create({
   inputField: {
-    borderWidth: 1,
+    borderWidth: 2,
+    margin: 10,
+    fontSize: 20,
+  },
+  titlefield: {
+    fontSize: 25,
+  },
+  weightfield: {
+    fontSize: 25,
   },
 });

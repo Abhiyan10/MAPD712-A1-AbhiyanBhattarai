@@ -3,13 +3,19 @@ import { StyleSheet, Text, TextInput, View } from "react-native";
 export default function ResultComponent({ value }) {
   return (
     <View>
-      <Text>Your BMI:</Text>
-      <Text>{value}</Text>
+      <Text style={style.bmifield}>Your BMI:</Text>
+
+      <Text style={style.resultField}>{value}</Text>
     </View>
   );
 }
 const style = StyleSheet.create({
-  inputField: {
+  resultField: {
     borderWidth: 1,
+    margin: 5,
+    fontSize: 25,
+  },
+  bmifield: {
+    fontSize: 20,
   },
 });

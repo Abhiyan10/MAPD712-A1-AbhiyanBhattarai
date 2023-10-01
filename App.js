@@ -26,7 +26,7 @@ export default function App() {
         metricViewClick={metricViewClick}
         standardViewClick={standardViewClick}
       />
-      {currentView === "standard" ? (
+      {currentView != "standard" ? (
         <StandardCalculator submitValue={submitValue} />
       ) : (
         <MetricCalculator submitValue={submitValue}></MetricCalculator>
@@ -39,11 +39,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#dac5a7",
     alignItems: "center",
     justifyContent: "center",
   },
   header: {
-    fontSize: 30,
+    fontSize: 40,
+    color: "blue",
   },
 });
